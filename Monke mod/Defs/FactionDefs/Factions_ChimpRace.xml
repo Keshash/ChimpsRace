@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Tribal -->
+
+  <FactionDef ParentName="FactionBase" Name="ChimpRace_TribeBase" Abstract="True">
+    <pawnSingular>tribesman</pawnSingular>
+    <pawnsPlural>tribespeople</pawnsPlural>
+    <categoryTag>Tribal</categoryTag>
+    <listOrderPriority>20</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canStageAttacks>true</canStageAttacks>
+    <factionIconPath>World/WorldObjects/Expanding/CaeruleanTribeBaseIcon</factionIconPath>
+    <geneticVariance>0.1</geneticVariance>
+    <techLevel>Neolithic</techLevel>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+    <allowedCultures>
+      <li>Corunan</li>
+    </allowedCultures>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+    </disallowedMemes>
+    <disallowedPrecepts>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_CoveringAnythingButGroinDisapproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+    </disallowedPrecepts>
+    <structureMemeWeights>
+      <Structure_Animist MayRequire="Ludeon.RimWorld.Ideology">4</Structure_Animist>
+      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
+      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistAbstract>
+      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+      <Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginChristian>
+      <Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginIslamic>
+      <Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginHindu>
+      <Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginBuddhist>
+    </structureMemeWeights>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <leaderTitle>chief</leaderTitle>
+    <caravanTraderKinds>
+      <li>Caravan_Neolithic_BulkGoods</li>
+      <li>Caravan_Neolithic_WarMerchant</li>
+      <li>Caravan_Neolithic_ShamanMerchant</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_Neolithic_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Neolithic_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 1)</li> <!--Constant 1 at all points levels-->
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <raidLootMaker>TribeRaidLootMaker</raidLootMaker>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(800, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <!-- Normal fights, ranged with melee mix-ins -->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <ChimpRace_Tribal_Penitent>5</ChimpRace_Tribal_Penitent>
+          <ChimpRace_Tribal_Warrior>5</ChimpRace_Tribal_Warrior>
+          <ChimpRace_Tribal_Archer>10</ChimpRace_Tribal_Archer>
+          <ChimpRace_Tribal_Hunter>10</ChimpRace_Tribal_Hunter>
+          <ChimpRace_Tribal_HeavyArcher>10</ChimpRace_Tribal_HeavyArcher>
+          <ChimpRace_Tribal_Berserker>5</ChimpRace_Tribal_Berserker>
+          <ChimpRace_Tribal_ChiefRanged>3</ChimpRace_Tribal_ChiefRanged>
+          <ChimpRace_Tribal_ChiefMelee>1.5</ChimpRace_Tribal_ChiefMelee>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, ranged only -->
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <ChimpRace_Tribal_Archer>10</ChimpRace_Tribal_Archer>
+          <ChimpRace_Tribal_Hunter>10</ChimpRace_Tribal_Hunter>
+          <ChimpRace_Tribal_HeavyArcher>10</ChimpRace_Tribal_HeavyArcher>
+          <ChimpRace_Tribal_ChiefRanged>5</ChimpRace_Tribal_ChiefRanged>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, melee only -->
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <ChimpRace_Tribal_Penitent>10</ChimpRace_Tribal_Penitent>
+          <ChimpRace_Tribal_Warrior>10</ChimpRace_Tribal_Warrior>
+          <ChimpRace_Tribal_Berserker>10</ChimpRace_Tribal_Berserker>
+          <ChimpRace_Tribal_ChiefMelee>5</ChimpRace_Tribal_ChiefMelee>
+        </options>
+      </li>
+      <li>
+        <!-- breach-capable fights, breachers plus ranged with melee mix-ins -->
+        <kindDef>Combat</kindDef>
+        <commonality>5</commonality>
+        <options>
+          <ChimpRace_Tribal_Breacher>5</ChimpRace_Tribal_Breacher>
+          <ChimpRace_Tribal_Penitent>5</ChimpRace_Tribal_Penitent>
+          <ChimpRace_Tribal_Warrior>5</ChimpRace_Tribal_Warrior>
+          <ChimpRace_Tribal_Archer>10</ChimpRace_Tribal_Archer>
+          <ChimpRace_Tribal_Hunter>10</ChimpRace_Tribal_Hunter>
+          <ChimpRace_Tribal_HeavyArcher>10</ChimpRace_Tribal_HeavyArcher>
+          <ChimpRace_Tribal_Berserker>5</ChimpRace_Tribal_Berserker>
+          <ChimpRace_Tribal_ChiefRanged>3</ChimpRace_Tribal_ChiefRanged>
+          <ChimpRace_Tribal_ChiefMelee>1.5</ChimpRace_Tribal_ChiefMelee>
+        </options>
+      </li>
+      <li>
+        <!-- Peaceful -->
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <ChimpRace_Tribal_Warrior>20</ChimpRace_Tribal_Warrior>
+          <ChimpRace_Tribal_Archer>10</ChimpRace_Tribal_Archer>
+          <ChimpRace_Tribal_Hunter>10</ChimpRace_Tribal_Hunter>
+          <ChimpRace_Tribal_HeavyArcher>10</ChimpRace_Tribal_HeavyArcher>
+          <ChimpRace_Tribal_Berserker>5</ChimpRace_Tribal_Berserker>
+          <ChimpRace_Tribal_ChiefRanged>3</ChimpRace_Tribal_ChiefRanged>
+          <ChimpRace_Tribal_ChiefMelee>1.5</ChimpRace_Tribal_ChiefMelee>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <ChimpRace_Tribal_Trader>1</ChimpRace_Tribal_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2.5</Alpaca>
+          <Elephant>2</Elephant>
+        </carriers>
+        <guards>
+          <ChimpRace_Tribal_Warrior>7</ChimpRace_Tribal_Warrior>
+          <ChimpRace_Tribal_Archer>10</ChimpRace_Tribal_Archer>
+          <ChimpRace_Tribal_Hunter>10</ChimpRace_Tribal_Hunter>
+          <ChimpRace_Tribal_HeavyArcher>10</ChimpRace_Tribal_HeavyArcher>
+          <ChimpRace_Tribal_Berserker>7</ChimpRace_Tribal_Berserker>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <ChimpRace_Tribal_Warrior>7</ChimpRace_Tribal_Warrior>
+          <ChimpRace_Tribal_Archer>10</ChimpRace_Tribal_Archer>
+          <ChimpRace_Tribal_Hunter>10</ChimpRace_Tribal_Hunter>
+          <ChimpRace_Tribal_HeavyArcher>10</ChimpRace_Tribal_HeavyArcher>
+          <ChimpRace_Tribal_Berserker>7</ChimpRace_Tribal_Berserker>
+          <ChimpRace_Tribal_ChiefRanged>10</ChimpRace_Tribal_ChiefRanged>
+        </options>
+      </li>
+      <li>
+        <kindDef>Settlement_RangedOnly</kindDef>
+        <options>
+          <ChimpRace_Tribal_Archer>10</ChimpRace_Tribal_Archer>
+          <ChimpRace_Tribal_Hunter>10</ChimpRace_Tribal_Hunter>
+          <ChimpRace_Tribal_HeavyArcher>10</ChimpRace_Tribal_HeavyArcher>
+          <ChimpRace_Tribal_ChiefRanged>10</ChimpRace_Tribal_ChiefRanged>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+  </FactionDef>
+
+  <FactionDef ParentName="ChimpRace_TribeBase">
+    <defName>ChimpRace_TribeRough</defName>
+    <label>chimp tribe</label>
+    <description>This is a tribe consisting entirely of Chimps. They are nomads who live off the land using primitive tools and weapons.\n\nDespite their apparent technological weakness, the tribals can be dangerous enemies and valuable friends because of their skill with low-tech warfare, their numbers, and their hardiness.\n\nThis particular tribe values warlike dominance; it may be difficult to turn them into an ally.</description>
+    <colorSpectrum>
+      <li>(138, 138, 92)</li>
+      <li>(153, 153, 102)</li>
+    </colorSpectrum>
+    <factionIconPath>World/WorldObjects/Expanding/ChimpTribeBaseIcon</factionIconPath>
+    <naturalEnemy>true</naturalEnemy>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PainIsVirtue</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+    </disallowedMemes>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>110</configurationListOrderPriority>
+  </FactionDef>
+
+</Defs>
