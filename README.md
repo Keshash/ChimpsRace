@@ -1,7 +1,7 @@
 # ChimpsRace
 Chimpanzee race for Rimworld. Made from "RimRaces - Cruttun Race" and "[B18] RimWorld of the Apes Mod 3.0" mods. I claim no ownership to those the parts of the mod, this is just a trimmed down merge of both.
 
-**Depends on Humanoid Alien Races**
+**This mod requires Humanoid Alien Races**
 
 Features:
 * Human-like chimpanzee race. They can use weapons and apparel just like normal colonists.
