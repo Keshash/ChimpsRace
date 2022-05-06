@@ -3,7 +3,8 @@ Chimpanzee race for Rimworld. Made from "RimRaces - Cruttun Race" and "[B18] Rim
 
 Features:
 * Human-like chimpanzee race. They can use weapons and apparel just like normal colonists.
-* They are worse at trading and fighting than humans (see race defs)
+* They are worse at trading and talking (see race defs)
+* Slightly (0.1) worse parry chance, slightly better melee crit chance. 
 * They are faster than humans
 * They have less weight/bulk capacity and parry worse than humans in CE.
 * Maybe something else, I don't remember.
