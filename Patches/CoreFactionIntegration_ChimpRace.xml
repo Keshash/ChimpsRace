@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+
+<!-- ============================ Outlander ============================ -->		
+
+			<li Class="PatchOperationAdd">
+				<xpath>*/FactionDef[@Name= "OutlanderFactionBase"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+				<value>
+          <ChimpRace_Villager>2</ChimpRace_Villager>
+          <ChimpRace_Mercenary_Slasher>5</ChimpRace_Mercenary_Slasher>
+          <ChimpRace_Mercenary_Gunner>8</ChimpRace_Mercenary_Gunner>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>*/FactionDef[@Name= "OutlanderFactionBase"]/pawnGroupMakers/li[kindDef="Peaceful"]/options</xpath>
+				<value>
+          <ChimpRace_Villager>10</ChimpRace_Villager>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>*/FactionDef[@Name= "OutlanderFactionBase"]/pawnGroupMakers/li[kindDef="Trader"]/guards</xpath>
+				<value>
+          <ChimpRace_Villager>0.7</ChimpRace_Villager>
+          <ChimpRace_Mercenary_Slasher>5</ChimpRace_Mercenary_Slasher>
+          <ChimpRace_Mercenary_Gunner>8</ChimpRace_Mercenary_Gunner>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>*/FactionDef[@Name= "OutlanderFactionBase"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+				<value>
+          <ChimpRace_Villager>0.7</ChimpRace_Villager>
+          <ChimpRace_Mercenary_Slasher>5</ChimpRace_Mercenary_Slasher>
+          <ChimpRace_Mercenary_Gunner>8</ChimpRace_Mercenary_Gunner>
+				</value>
+			</li>
+			
+
+<!-- ============================ Pirate ============================ -->		
+
+			<li Class="PatchOperationAdd">
+				<xpath>*/FactionDef[defName= "Pirate"]/pawnGroupMakers/li[commonality="100"]/options</xpath>
+				<value>
+          <ChimpRace_Mercenary_Gunner>8</ChimpRace_Mercenary_Gunner>
+          <ChimpRace_Mercenary_Slasher>2</ChimpRace_Mercenary_Slasher>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>*/FactionDef[defName= "Pirate"]/pawnGroupMakers/li[commonality="30"]/options</xpath>
+				<value>
+          <ChimpRace_Mercenary_Slasher>2</ChimpRace_Mercenary_Slasher>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>*/FactionDef[defName= "Pirate"]/pawnGroupMakers/li[commonality="20"]/options</xpath>
+				<value>
+          <ChimpRace_Mercenary_Gunner>8</ChimpRace_Mercenary_Gunner>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>*/FactionDef[defName= "Pirate"]/pawnGroupMakers/li[commonality="15"]/options</xpath>
+				<value>
+          <ChimpRace_Mercenary_Gunner>8</ChimpRace_Mercenary_Gunner>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>*/FactionDef[defName= "Pirate"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+				<value>
+          <ChimpRace_Mercenary_Gunner>8</ChimpRace_Mercenary_Gunner>
+          <ChimpRace_Mercenary_Slasher>2</ChimpRace_Mercenary_Slasher>
+				</value>
+			</li>
+			
+		</operations>
+	</Operation>
+
+</Patch>
