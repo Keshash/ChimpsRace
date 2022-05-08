@@ -1,59 +1,60 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-<AlienRace.RaceSettings>
-<defName>ChimpRaceSettings</defName>
-<pawnKindSettings>
-	<alienslavekinds>
-		<li>
-			<kindDefs>
-				<li>ChimpRace_Slave</li>
-			</kindDefs>
-			<chance>30.0</chance>
-		</li>
-	</alienslavekinds>
-	
-	<alienrefugeekinds>
-		<li>
-			<kindDefs>
-				<li>ChimpRace_SpaceRefugee</li>
-			</kindDefs>
-			<chance>15.0</chance>
-		</li>
-	</alienrefugeekinds>
-			
-    <startingColonists>
-        <li>
-            <pawnKindEntries>
+    <AlienRace.RaceSettings>
+        <defName>ChimpRaceSettings</defName>
+        <pawnKindSettings>
+            <alienslavekinds>
                 <li>
                     <kindDefs>
-                        <li>ChimpRace_Colonist</li>
+                        <li>ChimpRace_Slave</li>
                     </kindDefs>
-                    <chance>15.0</chance>
+                    <chance>100.0</chance>
                 </li>
-            </pawnKindEntries>
-            <factionDefs>
-                <li>PlayerColony</li>
-            </factionDefs>
-        </li>
-    </startingColonists>
-			
-    <alienwandererkinds>
-        <li>
-            <pawnKindEntries>
+            </alienslavekinds>
+
+            <alienrefugeekinds>
                 <li>
                     <kindDefs>
-                        <li>ChimpRace_Villager</li>
+                        <li>ChimpRace_SpaceRefugee</li>
                     </kindDefs>
-                    <chance>20.0</chance>
+                    <chance>100.0</chance>
                 </li>
-            </pawnKindEntries>
-            <factionDefs>
-                <li>PlayerColony</li> 
-            </factionDefs>
-        </li>
-    </alienwandererkinds>			
-</pawnKindSettings>
-</AlienRace.RaceSettings>
+            </alienrefugeekinds>
+
+            <startingColonists>
+                <li>
+                    <pawnKindEntries>
+                        <li>
+                            <kindDefs>
+                                <li>ChimpRace_Colonist</li>
+                            </kindDefs>
+                            <chance>100.0</chance>
+                        </li>
+                    </pawnKindEntries>
+                    <factionDefs>
+                        <li>PlayerColony</li>
+                    </factionDefs>
+                </li>
+            </startingColonists>
+
+            <alienwandererkinds>
+                <li>
+                    <pawnKindEntries>
+                        <li>
+                            <kindDefs>
+                                <li>ChimpRace_Villager</li>
+                            </kindDefs>
+                            <chance>100.0</chance>
+                        </li>
+                    </pawnKindEntries>
+                    <factionDefs>
+                        <li>ChimpPlayerTribe</li>
+                        <li>ChimpPlayerColony</li>
+                    </factionDefs>
+                </li>
+            </alienwandererkinds>
+        </pawnKindSettings>
+    </AlienRace.RaceSettings>
 
 </Defs>
